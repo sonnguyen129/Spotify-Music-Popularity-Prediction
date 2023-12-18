@@ -75,7 +75,7 @@ The popularity column runs from 0 to 100, with an average of 27, showing that th
 <a id="3.1"></a>
 ### What is the overall trend and impact of notable events on the music industry?
 
-<img src="./images/music-trend.png" width="600" height="320">
+<img src="./images/music-trend.png" width="750" height="400">
 
 **Key Findings:** 
 This graph shows how the popularity of music has grown over time, indicating how the current generation is more inclined to listen to music and how digitization has benefited the music industry. We can also conclude that the terrorist attacks in 2001 had a substantial detrimental impact on the music industry because the graph shows a steep fall in 2021. The entertainment industry thrives during the covid epidemic, and people want to listen to music more, so the covid pandemic benefits the music industry.
@@ -85,7 +85,7 @@ This graph shows how the popularity of music has grown over time, indicating how
 
 Bar Plot of the most popular artists
 
-<img src="./images/artist-bar-plot.png" width="600" height="400">
+<img src="./images/artist-bar-plot.png" width="700" height="500">
 
 Word Cloud for the most popular artists
 
@@ -97,7 +97,7 @@ In this graphic, the size of the word represents how frequently it appears. This
 <a id="3.3"></a>
 ### Which are the most popular songs in the dataset?
 
-<img src="./images/popular-song.png" width="650" height="500">
+<img src="./images/popular-song.png" width="750" height="500">
 
 **Key Findings:**
 Based on the results, the most popular songs are “Peaches” of Justin Bieber (2021). This song received the MTV Video Music Award for Best Pop and was nominated for the Grammy Award for Song of the Year. Other songs, such as "Astronaut in the Oceans" and "Binding Lights," are well-known worldwide. Talented performers such as Masked Wolf and The Weekend perform them.
@@ -105,7 +105,7 @@ Based on the results, the most popular songs are “Peaches” of Justin Bieber 
 <a id="3.4"></a>
 ### What characteristics most clearly characterize a popular song?
 
-<img src="./images/feature-impact.png" width="520" height="280">
+<img src="./images/feature-impact.png" width="600" height="280">
 
 **Key Findings:**
 When we compared the most popular songs to all of the songs in the dataset, we discovered that songs with higher energy and danceability tend to become more popular. However, when compared to standard songs, such popular songs lack acousticness and instrumentalness. Tracks released in recent years tend to be more popular.
@@ -113,7 +113,7 @@ When we compared the most popular songs to all of the songs in the dataset, we d
 <a id="3.5"></a>
 ### Univariate Analysis
 
-<img src="./images/histogram.png" width="520" height="700">
+![image1](./images/histogram.png)
 
 **Key Findings:**
 We can see that popularity, duration, explicit, speechiness, instrumentalness, liveness is skewed right. loudness, mode, time_signature are skewed left. Only danceability, energy, valence, tempo have normal distribution. Before we can use the machine learning models, we must transform the left and right skewed features have more symmetrical and bell-shaped distributions.
@@ -121,7 +121,7 @@ We can see that popularity, duration, explicit, speechiness, instrumentalness, l
 <a id="3.6"></a>
 ### Outliers Detection
 
-<img src="./images/box-plot.png" width="520" height="700">
+![image1](./images/box-plot.png)
 
 **Key Findings:**
 We can see that there are various features that have a lot of outliers from the boxplots of the variables. They are loudness, speechiness, instrumentality, liveness, duration ms, and pace. By utilizing IQR Ranges to reduce outliers, we can handle them. Or, we may handle them by using Robust Scaler. This scaler additionally employs IQR Ranges, making it extremely resistant to outliers.
@@ -139,7 +139,7 @@ We may deduce the following facts from the correlation matrix. According to the 
 Based on the column `popularity`, we establish a new variable named `highly_popular` with a threshold of 50. Songs with a popularity rating of more than 50 are highly popular. This will be our target variable for predicting a song's popularity.
 After creating this variable, we drop the column `popularity` and check the number of unique values the column `highly_popular` has. 
 
-<img src="./images/data-per-class.png" width="350" height="250">
+<img src="./images/data-per-class.png" width="450" height="350">
 
 **Key Findings:** 
 We have 510,758 unique values of class 0 and 75,843 unique values of class 1. We can see that the number of class 0 is 5 times more than the number of class 1. This is unbalanced data. To balance them, we must employ the Resampling approach. But before that, we need to split the target variable from predictors.
